@@ -1,0 +1,267 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--about-->
+	<div id="about" class="about">
+		<div class="container" style="width: 100%">
+			<div class="about-info">
+				<h3>Gavin Cobb</h3>
+				<h4>Software Engineer</h4>
+				<p>
+					• 2 years of professional experience focusing on creating efficient software solutions.
+				</p>
+				<p>
+					• Proven ability to design, develop, and deploy scalable
+					    applications.
+				</p>
+				<p> • Passion for using multiple technologies to deliver code at the highest
+					    standards.
+				</p>
+			</div>
+			<div class="about-grids">
+				<div class="about-grid">
+					<div class="about-grid-h4-blockwrapper">
+						<h4 class="about-grid-h4">Previous Work experience</h4>
+						@*<img class="HillromClose" src="/images/close.png">
+						<img class="SouthernGlazersClose" src="/images/close.png">
+						<img class="StraszClose" src="/images/close.png">*@
+					</div>
+					<div class="Hillrom">
+						<div class="HillromfirstInstance">
+							<div class="block-Image">
+								<span class="VerticalAlign"></span><img class="HillromLogo" src="/images/Hillromlogo.png" alt="Hillrom">
+								<img class="HillromArrow" src="/images/downarrow.png">
+							</div>
+						</div>
+						<div class="Hillromflex-container">
+							<img class="InvisibleHillromClose" src="/images/close.png">
+							<span class="VerticalAlign"></span><img class="HillromClicked" src="/images/Hillromlogo.png" alt="Hillrom">
+							<div class="HillromExperience"></div>
+							<img class="HillromClose" src="/images/close.png">
+						</div>
+						
+					</div>
+					<div class="SouthernGlazers">
+						<div class="SouthernGlazersfirstInstance">
+							<div class="block-Image">
+								<span class="VerticalAlign"></span><img class="SouthernGlazersLogo" src="/images/SouthernGlazerslogo.png" alt="Southern Glazers">
+								<img class="SouthernGlazersArrow" src="/images/downarrow.png">
+							</div>
+						</div>
+						<div class="SouthernGlazersflex-container">
+							<img class="InvisibleSouthernGlazersClose" src="/images/close.png">
+							<span class="VerticalAlign"></span><img class="SouthernGlazersClicked" src="/images/SouthernGlazerslogo.png" alt="Southern Glazers">
+							<div class="SouthernGlazersExperience"></div>
+							<img class="SouthernGlazersClose" src="/images/close.png">
+						</div>
+						
+					</div>
+					<div class="Strasz">
+						<div class="StraszfirstInstance">
+							<div class="block-Image">
+								<span class="VerticalAlign"></span><img class="StraszLogo" src="/images/Straszlogo.png" alt="Strasz">
+								<img class="StraszArrow" src="/images/downarrow.png">
+							</div>
+						</div>
+						<div class="Straszflex-container">
+							<img class="InvisibleStraszClose" src="/images/close.png">
+							<span class="VerticalAlign"></span><img class="StraszClicked" src="/images/Straszlogo.png" alt="Strasz">
+							<div class="StraszExperience"></div>
+							<img class="StraszClose" src="/images/close.png">
+						</div>
+						
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--/about-->
+	<script>
+
+$(document).ready(function () {
+
+	var HillromString = "• Developed and maintained six main Excel Medical Projects that account for millions of users and dozens of hospitals."  + '\r\n' + "• Built many Drivers in C# that extract patient data from medical devices via RS-232 connection, and stored them to Databases."  + '\r\n' + "• Created an update and loading system so that CarePanel Devices can be updated together and progress can be visualized on the client over TCP connections. Utilized Java, C#, Javascript, CSS, HTML, AndroidStudio and .Net Framework."  + '\r\n' + "• Automated installation process, and database build and population process for the main web service utilizing C# and Entity framework."  + '\r\n' +  "• Worked with Video Cameras to transmit a live feed to a web application, utilizing C++ and .Net Framework. • Fixed over 100 backend and frontend bugs in several web applications, web services, sql scripts, and desktop applications."  + '\r\n' + "• Refactored 3 out of 7 of the main legacy application's tabs to be more efficient with a modern design."  + '\r\n' + "• Refactored the main Web Service's dozens of stored procedures into entity framework structure for maintainability."  + '\r\n' + "• Assisted in the Release of production updates on all 6 main projects as well as deployment to a hospital."  + '\r\n' +  "• Organized source control via bitbucket, as well as documented necessary development processes."  + '\r\n' + "• Built features and fixed bugs on projects created on ASP.Net Core, .Net Framework, and other environments. Utilized C#, Java, and C++ for the backend; Javascript (vue and vanilla) and Razor for frontend; MS SQL Server for Database management; HTML and CSS for markup; JSON, XML used for data and configuration string parsing";
+    var SouthernGlazersString = "• Worked on the Critical Apps API team to create and fix services that send data to other applications in a .Net environment."  + '\r\n' + "• Developed an Error Reporting Dashboard web application to track and display payment and order errors, Utilizing ASP.Net with C#, Javascript, HTML, and CSS."  + '\r\n' + "• Developed a process to transfer inventory data from Elastic to Michigan sites."  + '\r\n' + "• Created Unit Test Projects for 14 Services. Worked on the decommission of legacy software and refactored to fit a modern approach.";
+    var StraszString = "• Worked on the Product Development team to add and change existing functionality for Assessment development and publishing software."  + '\r\n' + "• Developed the \"Pro!\" Desktop application utilizing WPF and embedded web browsers. WPF, ASP.Net, Angular, with C#, Xml, Javascript, HTML, and CSS."  + '\r\n' + "• Developed the \"Publish!\" web application utilizing ASP.Net, with C#, Xml, TypeScript, Javascript, HTML, and CSS."  + '\r\n' + "• Developed the Item writing and Review project web application that allows users to review assessment details and approve/change them."  + '\r\n' + "• Developed a process to clone and duplicate exam projects to allow ease of reusability for the user."  + '\r\n' + "• Worked on UI changes and logic changes to existing rulesets within the desktop application."  + '\r\n' + "• Created a process to import IRT data within the exam to allow for algorithmic based questioning within the Pearson Driver."  + '\r\n' + "• Developed a process to provide examinees with Score Report's based on passed, failed, and taken exams. ";
+    var result = "";
+	var windowSize = $(window).width();
+
+	function OpenHillrom() {
+
+		result = HillromString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.SouthernGlazers').hide();
+        $('.Strasz').hide();
+        $('.HillromfirstInstance').hide();
+        $('.Hillromflex-container').css("display", "flex");
+        $('.Hillrom').css("width", "100%");
+        $('.block-image').css("margin-left", "0%");
+        $('.HillromExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseHillrom() {
+
+		windowSize = $(window).width();
+        if (windowSize < 481) {
+            $('.Hillrom').css("width", "100%");
+        }
+        else if (windowSize < 1025 && windowSize > 480) {
+            $('.Hillrom').css("width", "32%");
+        }
+        else if(windowSize > 1024){
+			$('.Hillrom').css("width", "33%");
+		}
+        $('.block-image').css("margin-left", "auto");
+        $('.Hillromflex-container').hide();
+		$('.SouthernGlazers').show();
+        $('.Strasz').show();
+        $('.HillromfirstInstance').show();
+
+	}
+	function OpenSouthernGlazers() {
+
+		result = SouthernGlazersString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.Hillrom').hide();
+        $('.Strasz').hide();
+        $('.SouthernGlazersfirstInstance').hide();
+        $('.SouthernGlazersflex-container').css("display", "flex");
+        $('.SouthernGlazers').css("width", "100%");
+        $('.block-image').css("margin-left", "0%");
+        $('.SouthernGlazersExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseSouthernGlazers() {
+
+        if (windowSize < 481) {
+            $('.SouthernGlazers').css("width", "100%");
+        }
+        else if (windowSize < 1025 && windowSize > 480) {
+            $('.SouthernGlazers').css("width", "32%");
+        }
+        else if(windowSize > 1024){
+			$('.SouthernGlazers').css("width", "33%");
+		}
+        $('.block-image').css("margin-left", "auto");
+        $('.SouthernGlazersflex-container').hide();
+		$('.Hillrom').show();
+        $('.Strasz').show();
+        $('.SouthernGlazersfirstInstance').show();
+
+
+	}
+	function OpenStrasz() {
+
+		result = StraszString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.SouthernGlazers').hide();
+		$('.Hillrom').hide();
+		$('.StraszfirstInstance').hide();
+		$('.Straszflex-container').css("display", "flex");
+		$('.Strasz').css("width", "100%");
+		$('.block-image').css("margin-left", "0%");
+		$('.StraszExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseStrasz() {
+
+		windowSize = $(window).width();
+        if (windowSize < 481) {
+            $('.Strasz').css("width", "100%");
+        }
+        else if (windowSize < 1025 && windowSize > 480) {
+            $('.Strasz').css("width", "32%");
+        }
+        else if(windowSize > 1024){
+			$('.Strasz').css("width", "33%");
+		}
+		$('.block-image').css("margin-left", "auto");
+		$('.Straszflex-container').hide();
+		$('.SouthernGlazers').show();
+		$('.Hillrom').show();
+		$('.StraszfirstInstance').show();
+
+	}
+
+	$('.HillromLogo').click(function (event) {
+
+		OpenHillrom();
+
+	})
+
+	$('.HillromArrow').click(function (event) {
+
+		OpenHillrom();
+
+	})
+
+	$('.HillromClicked').click(function (event) {
+
+		CloseHillrom();
+
+	})
+
+	$('.HillromClose').click(function (event) {
+
+		CloseHillrom();
+
+	})
+
+	$('.SouthernGlazersLogo').click(function (event) {
+
+		OpenSouthernGlazers();
+
+	})
+
+	$('.SouthernGlazersArrow').click(function (event) {
+
+		OpenSouthernGlazers();
+
+	})
+
+	$('.SouthernGlazersClicked').click(function (event) {
+
+		CloseSouthernGlazers();
+
+	})
+
+	$('.SouthernGlazersClose').click(function (event) {
+
+		CloseSouthernGlazers();
+
+	})
+
+	$('.StraszLogo').click(function (event) {
+
+		OpenStrasz();
+
+	})
+
+	$('.StraszArrow').click(function (event) {
+
+		OpenStrasz();
+
+	})
+
+	$('.StraszClicked').click(function (event) {
+
+		CloseStrasz();
+
+	})
+
+
+	$('.StraszClose').click(function (event) {
+
+		CloseStrasz();
+
+	})
+})
+</script>
+

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--contact-->
+	<div id="contact" class="contact">
+		<div class="container" style="width:100%">
+			<div class="contact-info">
+				<h3>CONTACT</h3>
+			</div>
+			<div class="contact-form">
+					<form action="https://formspree.io/f/xzbwbqdr"method="POST">
+					<div class="nameRow">
+						<input class="name" type="text" name="name" placeholder="Name" required >
+						<p class="nameStatus">*Name Must Be Longer*</p>
+					</div>
+					<div class="emailRow">
+						<input class="email" type="text" name="email" placeholder="E-mail">
+						<p class="emailStatus">*Email is not valid*</p>
+					</div>
+					<div class="subjectRow">
+						<input class="subject" type="text" name="subject" placeholder="Subject">
+						<p class="subjectStatus">*Subject Must Be Longer*</p>
+					</div>
+					<div class="messageRow">
+						<textarea class="message" name="message" placeholder="Compose Message" style="height: 100px !important"></textarea>
+						<p class="messageStatus">*Message Must Be Longer*</p>
+					</div>
+					<button type="submit" class="submit hvr-shutter-in-vertical two" name="submit">Submit</button>
+					</form>
+			</div>
+			<div class="contact-details">
+				<h4>Contact details</h4>
+				<a href="mailto:gavincobbco@gmail.com">gavincobbco@gmail.com</a>
+			</div>
+			<div class="contact-icons">
+				<a href="https://www.linkedin.com/in/gavin-cobb/"><span class="linkedin"> </span></a>
+				<a href="https://github.com/gcobb1"><span class="github"> </span></a>
+			</div>
+		</div>
+	</div>
+	<!--/contact-->
+
+<script>
+
+$(document).ready(function () {
+
+	$('.submit').click(function (event) {
+
+		var email = $('.email').val()
+		var message = $('.message').val()
+		var subject = $('.subject').val()
+		var name = $('.name').val()
+
+        if (email.length <= 6 || !email.includes('@('@')') || !email.includes('.')) {
+            event.preventDefault()
+            $(".emailStatus")[0].style.display = "inline-block";
+        }
+        else {
+			$(".emailStatus")[0].style.display = "none";
+		}
+
+		if(name.length < 2){	
+			event.preventDefault()
+			$(".nameStatus")[0].style.display = "inline-block";
+		}
+		else {
+			$(".nameStatus")[0].style.display = "none";
+		}
+	
+		if(subject.length < 2){	
+			event.preventDefault()
+			$(".subjectStatus")[0].style.display = "inline-block";
+		}
+		else {
+			$(".subjectStatus")[0].style.display = "none";
+		}
+		if(message.length < 2){
+			event.preventDefault()
+			$(".messageStatus")[0].style.display = "inline-block";
+		}
+		else {
+			$(".messageStatus")[0].style.display = "none";
+		}
+	})
+})
+</script>
+

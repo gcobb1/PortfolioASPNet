@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true" />
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/easing.js" asp-append-version="true"></script>
+    <script src="~/js/easyResponsiveTabs.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.magnific-popup.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/modernizr.custom.53451.js" asp-append-version="true"></script>
+    <script src="~/js/move-top.js" asp-append-version="true"></script>
+    <script src="~/js/responsiveslides.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+	</head>
+<body>
+    <header>
+        <div id="home" class="banner">
+            <div class="top-menu cl-effect-1" id="cl-effect-1">
+                <span class="menu"> </span>
+                <ul>
+                    <li class="nav-item">
+                        <a class="scroll" asp-area="" asp-controller="Index" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="scroll" asp-area="" asp-controller="Index" asp-action="Resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="scroll" asp-area="" asp-controller="Index" asp-action="Portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="scroll" asp-area="" asp-controller="Index" asp-action="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="scroll" asp-area="" asp-controller="Index" asp-action="Home">Home</a>
+                    </li>
+                </ul>
+            </div>
+
+		<!-- script-for-menu -->
+		<script>
+			$("span.menu").click(function () {
+				$(".top-menu ul").slideToggle("slow", function () {});
+			});
+		</script>
+		<!-- script-for-menu -->
+	</div> 
+
+	<!--/header-->
+    </header>
+
+    <div class="container" color="#f6f7f8">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--footer-->
+	<footer>
+	<div class="footer">
+		<div class="container" style="width:100%">
+			<div class="footer-icons">
+                	<a href="https://www.linkedin.com/in/gavin-cobb/"><span class="linkedin" style="display:inline-block"> </span></a>
+					<a href="https://github.com/gcobb1"><span class="github" style="display:inline-block"> </span></a>
+					<p style="display:block">&copy; 2022 Gavin Cobb. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<!--/footer-->
+</body>
+</html>

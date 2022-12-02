@@ -1,0 +1,769 @@
+﻿
+@{
+    ViewData["Title"] = "Portfolio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--services-->
+<div id="services" class="services">
+	<div class="container" style="width: 100%">
+		<div class="services-info">
+			<h3>Portfolio</h3>
+		</div>
+		<div class="services-info-bottom">
+			<select id = "selectProjectType"> 
+				<option value="WebApplications">Web Applications</option>
+				<option value="Games">PC Games</option>
+				<option value="Research">Research Presentation</option>
+			</select> 
+		</div>
+		<div class="webapp-grids">
+			<div class="webapp-grid">
+				<div class="price-bg">
+					<p class="webapp-label-1">Pathfinding Algorithm Visualizer</p>
+					<div class="PowerPuzzleImgFlexContainer WebAppSlides1 Shown">
+						<img class="InvisiblePowerPuzzleImgArrow" src="/images/downarrow.png">
+						<img class="PowerPuzzleImg" src="/images/PowerPuzzle.png" alt="">
+						<img class="PowerPuzzleImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="PowerPuzzleContainer">
+						<div class="PowerPuzzleExperience"></div>
+						<img class="PowerPuzzleClose" src="/images/close.png">
+					</div>
+					<div class="Portfolio1ImgFlexContainer WebAppSlides1 None">
+						<img class="InvisiblePortfolio1ImgArrow" src="/images/downarrow.png">
+						<img class="Portfolio1Img" src="/images/Portfolio1.png" alt="">					
+						<img class="Portfolio1ImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="Portfolio1Container">
+						<div class="Portfolio1Experience"></div>
+						<img class="Portfolio1Close" src="/images/close.png">
+					</div>
+					<div class="AuthyImgFlexContainer WebAppSlides1 None">
+						<img class="InvisibleAuthyImgArrow" src="/images/downarrow.png">
+						<img class="AuthyImg" src="/images/Authy.png" alt="">
+						<img class="AuthyImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="AuthyContainer">
+						<div class="AuthyExperience"></div>
+						<img class="AuthyClose" src="/images/close.png">
+					</div>
+					<div class="LegendsBladeImgFlexContainer WebAppSlides3 None">
+						<img class="InvisibleLegendsBladeImgArrow" src="/images/downarrow.png">
+						<img class="LegendsBladeImg" src="/images/LegendsBlade.png" alt="">
+						<img class="LegendsBladeImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="LegendsBladeContainer">
+						<div class="LegendsBladeExperience"></div>
+						<img class="LegendsBladeClose" src="/images/close.png">
+					</div>
+					<div class="ResearchImgFlexContainer WebAppSlides5 None">
+						<img class="InvisibleResearchImgArrow" src="/images/downarrow.png">
+						<img class="ResearchImg" src="/images/Research.png" alt="">
+						<img class="ResearchImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="ResearchContainer">
+						<div class="ResearchExperience"></div>
+						<img class="ResearchClose" src="/images/close.png">
+					</div>
+					<div class="webapp-button1">
+						<a href="#" class="hvr-shutter-in-vertical">View</a>
+					</div>
+				</div>
+			</div>
+			<div class="webapp-grid">
+				<div class="price-bg">
+					<p class="webapp-label-2">Pathfinding Algorithm Visualizer</p>
+					<div class="Portfolio2ImgFlexContainer WebAppSlides2 Shown">
+						<img class="InvisiblePortfolio2ImgArrow" src="/images/downarrow.png">
+						<img class="Portfolio2Img" src="/images/Portfolio2.png" alt="">
+						<img class="Portfolio2ImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="Portfolio2Container">
+						<div class="Portfolio2Experience"></div>
+						<img class="Portfolio2Close" src="/images/close.png">
+					</div>
+					<div class="ScrumImgFlexContainer WebAppSlides2 None">
+						<img class="InvisibleScrumImgArrow" src="/images/downarrow.png">
+						<img class="ScrumImg" src="/images/Scrum.png" alt="">
+						<img class="ScrumImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="ScrumContainer">
+						<div class="ScrumExperience"></div>
+						<img class="ScrumClose" src="/images/close.png">
+					</div>
+					<div class="FlappyBirdImgFlexContainer WebAppSlides4 None">
+						<img class="InvisibleFlappyBirdImgArrow" src="/images/downarrow.png">
+						<img class="FlappyBirdImg" src="/images/FlappyBird.png" alt="">
+						<img class="FlappyBirdImgArrow" src="/images/downarrow.png">
+					</div>
+					<div class="FlappyBirdContainer">
+						<div class="FlappyBirdExperience"></div>
+						<img class="FlappyBirdClose" src="/images/close.png">
+					</div>
+					<div class="webapp-button2">
+						<a href="#" class="hvr-shutter-in-vertical">View</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="IndexButtons">
+				<button class="webapp-button prev">Prev</button>
+				<button class="webapp-button SlideIndex1">1</button>
+				<button class="webapp-button SlideIndex2">2</button>
+				<button class="webapp-button SlideIndex3">3</button>
+				<button class="webapp-button next">Next</button>
+		</div>
+	</div>
+</div>
+
+<!--/services-->
+
+<script>
+
+
+$(window).load(function() {
+	$('select').each(function () {
+		var select = $(this);
+		select.val("WebApplications").change();
+	});
+});
+$(document).ready(function () {
+
+	var PowerPuzzleString = "• \"Power Puzzle!\" is an interactive puzzle-based Web Application consisting of grids containing numbers up to (99!/2) combinations."  + '\r\n' + "• Implemented a system in which users traverse a matrix to solve the puzzle mixed by a random number generation algorithm."  + '\r\n' + "• Implemented a unique, original, and ordered pathfinding algorithm that traverses a matrix to find an ordered solution in polynomial time."  + '\r\n' + "• Created and designed a visualizer that is connected to a service on the VPS which distributes data from the pathfinding algorithm to the client."  + '\r\n' + "• Built backend service and algorithm's library in C++."  + '\r\n' + "• Styled UI with CSS and manipulated HTML DOM with Wt."  + '\r\n' + "• Configured deployment with XML."
+    var Portfolio2String = "• \"Portfolio\" is a portfolio website to showcase these projects and provide a visual interpretation of this Resume."  + '\r\n' + "• Designed UI with HTML and CSS."  + '\r\n' + "•created an Email Contact Form using Javascript and JQuery.";
+	var AuthyString = "• \"ProAuthy\" is a User Authentication System Application that allows users to authenticate their identity by Username and Password."  + '\r\n' + "• Implemented Data traversal algorithms based on the size of database for maximum efficiency. Used backend to authenticate other projects."  + '\r\n' + "• Built backend in C++. Styled UI with CSS and manipulated HTML DOM with Wt";
+	var Portfolio1String = "• \"Portfolio\" is a portfolio web application created with ASP.Net to showcase these projects and provide a visual interpretation of this Resume."  + '\r\n' + "• Utilized Asp.Net to create the MVC layout for the web application."  + '\r\n' + "• Designed UI with HTML and CSS."  + '\r\n' + "• created an Email Contact Form using Javascript and JQuery."  + '\r\n' + "• Made interactive views with javascript";
+	var ScrumString = "• \"Scrum Task Board\" is an interactive Web Application based on Agile Methodologies."  + '\r\n' + "• Implemented a system in which user data is protected while creating an organized Sprint-based environment."  + '\r\n' + "• Developed a backend that Stores and manipulates data dynamically, emphasizing efficiency, security and organization."  + '\r\n' + "• Built backend in C++. Stored User data with MySQL. Styled UI with CSS, minimal javascript and manipulated HTML DOM with Wt.";
+    var LegendsBladeString = "• \"A Legend's Blade\" is a 3D infinite survival Sword-Fighting game that is available on Mac, Windows, and Linux."  + '\r\n' + "• Sole Contributor to Game Programming, Art, Animation, 3d Modeling, Music, Sound Effects, Game Design, UX/UI, and Networking."  + '\r\n' + "• Implemented dynamic difficulty algorithm, live-scoring, Leaderboard system, Artificial Intelligence, level design constructs, round management system, and optimized collision detection."  + '\r\n' + "• Created and designed game with Unity in C#.";
+    var FlappyBirdString = "• \"Infinite Fantasy\" is a retro-style 2D infinite side-scroller game."  + '\r\n' + "• Developed Collision Detection, Physics-based Kinematic Algorithms, a live scoring system, a leaderboard management system, and a dynamic difficulty Algorithm."  + '\r\n' + "• Built the entire program and UI in C++ with pixels rendered through OpenGL using a low level Pixel Game Engine.";
+    var ResearchString = "• Researched Artificial Intelligence, Machine and Deep Learning."  + '\r\n' + "• Modeled Machine Learning algorithms with TensorFlow."  + '\r\n' + "• Created a presentation that displays research findings as well as educates on AI concepts in Insurance.";
+	var slideIndex = 1;
+	var Titles = ["Pathfinding Algorithm Visualizer","Previous Portfolio Website","Authentication System", "Asp.Net Portfolio Web App", "Sprint Management System", "3D Action-Adventure Game", "2D Side-Scroller Game", "AI: Significant Impacts in the Insurance Sector"];
+	var Links = ["https://github.com/gcobb1/PowerPuzzle","https://github.com/gcobb1/PortfolioWebsite","https://github.com/gcobb1/ProAuthy", "https://github.com/gcobb1/PortfolioWebsite", "https://github.com/gcobb1/SCRUMBoard", "https://www.youtube.com/watch?v=UreAODjFMM0", "https://www.youtube.com/watch?v=R3QR_XIBqks", "https://www.researchgate.net/publication/341700711_Artificial_Intelligence_Significance_In_The_Insurance_Sector.com"];
+    var ProjectTypeIndex = 0;
+	showDivs(1);
+	$('select').each(function () {
+		var select = $(this);
+		select.val("WebApplications").change();
+	});
+	
+	$('.PowerPuzzleImg').click(function (event) {
+
+		OpenPowerPuzzle();
+
+	})
+	$('.PowerPuzzleImgArrow').click(function (event) {
+
+		OpenPowerPuzzle();
+
+	})
+	$('.PowerPuzzleClose').click(function (event) {
+
+		ClosePowerPuzzle();
+
+	})
+	$('.Portfolio1Img').click(function (event) {
+
+		OpenPortfolio1();
+
+	})
+	$('.Portfolio1ImgArrow').click(function (event) {
+
+		OpenPortfolio1();
+
+	})
+	$('.Portfolio1Close').click(function (event) {
+
+		ClosePortfolio1();
+
+	})
+	$('.AuthyImg').click(function (event) {
+
+		OpenAuthy();
+
+	})
+	$('.AuthyImgArrow').click(function (event) {
+
+		OpenAuthy();
+
+	})
+	$('.AuthyClose').click(function (event) {
+
+		CloseAuthy();
+
+	})
+	$('.Portfolio2Img').click(function (event) {
+
+		OpenPortfolio2();
+
+	})
+	$('.Portfolio2ImgArrow').click(function (event) {
+
+		OpenPortfolio2();
+
+	})
+	$('.Portfolio2Close').click(function (event) {
+
+		ClosePortfolio2();
+
+	})
+	$('.ScrumImg').click(function (event) {
+
+		OpenScrum();
+
+	})
+	$('.ScrumImgArrow').click(function (event) {
+
+		OpenScrum();
+
+	})
+	$('.ScrumClose').click(function (event) {
+
+		CloseScrum();
+
+	})
+	$('.LegendsBladeImg').click(function (event) {
+
+		OpenLegendsBlade();
+
+	})
+	$('.LegendsBladeImgArrow').click(function (event) {
+
+		OpenLegendsBlade();
+
+	})
+	$('.LegendsBladeClose').click(function (event) {
+
+		CloseLegendsBlade();
+
+	})
+	$('.FlappyBirdImg').click(function (event) {
+
+		OpenFlappyBird();
+
+	})
+	$('.FlappyBirdImgArrow').click(function (event) {
+
+		OpenFlappyBird();
+
+	})
+	$('.FlappyBirdClose').click(function (event) {
+
+		CloseFlappyBird();
+
+	})
+	$('.ResearchImg').click(function (event) {
+
+		OpenResearch();
+
+	})
+	$('.ResearchImgArrow').click(function (event) {
+
+		OpenResearch();
+
+	})
+	$('.ResearchClose').click(function (event) {
+
+		CloseResearch();
+
+	})
+	
+	$('.SlideIndex1').click(function (event) {
+		//3 if statements to determine method call
+        if (ProjectTypeIndex == 0) {
+            showDivs(slideIndex = 1);
+        }
+        else if (ProjectTypeIndex == 1) {
+            showGameDivs(slideIndex = 1);
+        }
+        else if (ProjectTypeIndex == 2) {
+			showResearchDivs(slideIndex = 1);
+		}
+		
+		$('.SlideIndex1').css("background-color", "#b59a5a");
+		$('.SlideIndex2').css("background-color", "white");
+		$('.SlideIndex3').css("background-color", "white");
+
+	})
+
+	$('.SlideIndex2').click(function (event) {
+        if (ProjectTypeIndex == 0) {
+            showDivs(slideIndex = 2);
+        }
+        else if (ProjectTypeIndex == 1) {
+            showGameDivs(slideIndex = 2);
+        }
+        else if (ProjectTypeIndex == 2) {
+			showResearchDivs(slideIndex = 2);
+		}
+        $('.SlideIndex2').css("background-color", "#b59a5a");
+		$('.SlideIndex1').css("background-color", "white");
+		$('.SlideIndex3').css("background-color", "white");
+	})
+
+	$('.SlideIndex3').click(function (event) {
+        if (ProjectTypeIndex == 0) {
+            showDivs(slideIndex = 3);
+        }
+        else if (ProjectTypeIndex == 1) {
+            showGameDivs(slideIndex = 3);
+        }
+        else if (ProjectTypeIndex == 2) {
+			showResearchDivs(slideIndex = 3);
+		}
+        $('.SlideIndex3').css("background-color", "#b59a5a");
+		$('.SlideIndex1').css("background-color", "white");
+		$('.SlideIndex2').css("background-color", "white");
+	})
+
+	$('.prev').click(function (event) {
+        plusDivs(-1);
+	})
+
+	$('.next').click(function (event) {
+        plusDivs(1);
+	})
+
+	$(function() {
+		$("#selectProjectType").on("change",function() {
+			const projectType = this.value;
+            if (projectType == "") {
+                return;
+            }
+            else if (projectType == "WebApplications") {
+				$('.SlideIndex1').css("background-color", "#b59a5a");
+				$('.SlideIndex2').css("background-color", "white");
+				$('.SlideIndex3').css("background-color", "white");
+				showDivs(slideIndex = 1);
+            }
+            else if (projectType == "Games") {
+				$('.SlideIndex1').css("background-color", "#b59a5a");
+				$('.SlideIndex2').css("background-color", "white");
+				$('.SlideIndex3').css("background-color", "white");
+				showGameDivs(slideIndex = 1);
+			}
+			else if (projectType == "Research") {
+				$('.SlideIndex1').css("background-color", "#b59a5a");
+				$('.SlideIndex2').css("background-color", "white");
+				$('.SlideIndex3').css("background-color", "white");
+				showResearchDivs(slideIndex = 1);
+			}
+		}); 
+	});
+
+	function ShowWebSlideIndexes() {
+        $('.SlideIndex2').css("display", "inline-block");
+        $('.SlideIndex3').css("display", "inline-block");
+	}
+
+	function ShowGameSlideIndexes() {
+        $('.SlideIndex2').css("display", "none");
+        $('.SlideIndex3').css("display", "none");
+		$('.prev').css("display", "none");
+		$('.next').css("display", "none");
+	}
+
+	function ShowResearchSlideIndexes() {
+        $('.SlideIndex2').css("display", "none");
+        $('.SlideIndex3').css("display", "none");
+		$('.prev').css("display", "none");
+		$('.next').css("display", "none");
+	}
+
+	function CloseDialogs() {
+        ClosePowerPuzzle();
+        ClosePortfolio1();
+        CloseAuthy();
+        ClosePortfolio2();
+        CloseScrum();
+        CloseLegendsBlade();
+        CloseFlappyBird();
+        CloseResearch();
+	}
+
+    function HideGames() {
+
+        var i = 0;
+		var WebAppSlides3 = $('.WebAppSlides3');
+		var WebAppSlides4 = $('.WebAppSlides4');
+
+		for (i = 0; i < WebAppSlides3.length; i++) {
+            $('.WebAppSlides3.Shown').addClass("None");
+			$('.WebAppSlides3.Shown').removeClass("Shown");
+		}
+
+		for (i = 0; i < WebAppSlides4.length; i++) {
+            $('.WebAppSlides4.Shown').addClass("None");
+			$('.WebAppSlides4.Shown').removeClass("Shown");
+		}
+	}
+
+    function HideResearch() {
+
+        var i = 0;
+		var WebAppSlides5 = $('.WebAppSlides5');
+		var WebAppSlides6 = $('.WebAppSlides6');
+
+		for (i = 0; i < WebAppSlides5.length; i++) {
+            $('.WebAppSlides5.Shown').addClass("None");
+			$('.WebAppSlides5.Shown').removeClass("Shown");
+		}
+
+		for (i = 0; i < WebAppSlides6.length; i++) {
+            $('.WebAppSlides6.Shown').addClass("None");
+			$('.WebAppSlides6.Shown').removeClass("Shown");
+		}
+	}
+
+	function HideWebApps() {
+
+		var i = 0;
+		var WebAppSlides1 = $('.WebAppSlides1');
+		var WebAppSlides2 = $('.WebAppSlides2');
+
+		for (i = 0; i < WebAppSlides1.length; i++) {
+            $('.WebAppSlides1.Shown').addClass("None");
+			$('.WebAppSlides1.Shown').removeClass("Shown");
+		}
+
+		for (i = 0; i < WebAppSlides2.length; i++) {
+            $('.WebAppSlides2.Shown').addClass("None");
+			$('.WebAppSlides2.Shown').removeClass("Shown");
+		}
+	}
+
+	function OpenLegendsBlade() {
+		//need new legends blade string
+        result = LegendsBladeString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.LegendsBladeImgFlexContainer').hide();
+		$('.LegendsBladeContainer').css("display", "block");
+		$('.LegendsBladeClose').css("display", "inline-block");
+        $('.LegendsBladeExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseLegendsBlade() {
+
+        $('.LegendsBladeContainer').hide();
+		$('.LegendsBladeImgFlexContainer').css("display", "flex");
+		$('.LegendsBladeClose').hide();
+	}
+
+	function OpenFlappyBird() {
+		//need new legends blade string
+        result = FlappyBirdString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.FlappyBirdImgFlexContainer').hide();
+		$('.FlappyBirdContainer').css("display", "block");
+		$('.FlappyBirdClose').css("display", "inline-block");
+        $('.FlappyBirdExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseFlappyBird() {
+
+        $('.FlappyBirdContainer').hide();
+		$('.FlappyBirdImgFlexContainer').css("display", "flex");
+		$('.FlappyBirdClose').hide();
+	}
+
+	function OpenPowerPuzzle() {
+
+        result = PowerPuzzleString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.PowerPuzzleImgFlexContainer').hide();
+		$('.PowerPuzzleContainer').css("display", "block");
+		$('.PowerPuzzleClose').css("display", "inline-block");
+        $('.PowerPuzzleExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function ClosePowerPuzzle() {
+
+        $('.PowerPuzzleContainer').hide();
+		$('.PowerPuzzleImgFlexContainer').css("display", "flex");
+		$('.PowerPuzzleClose').hide();
+	}
+	function OpenPortfolio1() {
+
+        result = Portfolio1String.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.Portfolio1ImgFlexContainer').hide();
+		$('.Portfolio1Container').css("display", "block");
+		$('.Portfolio1Close').css("display", "inline-block");
+        $('.Portfolio1Experience')[0].innerHTML = result.join('');
+
+	}
+
+	function ClosePortfolio1() {
+
+        $('.Portfolio1Container').hide();
+		$('.Portfolio1ImgFlexContainer').css("display", "flex");
+		$('.Portfolio1Close').hide();
+	}
+	function OpenAuthy() {
+
+        result = AuthyString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.AuthyImgFlexContainer').hide();
+		$('.AuthyContainer').css("display", "block");
+		$('.AuthyClose').css("display", "inline-block");
+        $('.AuthyExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseAuthy() {
+
+        $('.AuthyContainer').hide();
+		$('.AuthyImgFlexContainer').css("display", "flex");
+		$('.AuthyClose').hide();
+	}
+	function OpenPortfolio2() {
+
+        result = Portfolio2String.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.Portfolio2ImgFlexContainer').hide();
+		$('.Portfolio2Container').css("display", "block");
+		$('.Portfolio2Close').css("display", "inline-block");
+        $('.Portfolio2Experience')[0].innerHTML = result.join('');
+
+	}
+
+	function ClosePortfolio2() {
+
+        $('.Portfolio2Container').hide();
+		$('.Portfolio2ImgFlexContainer').css("display", "flex");
+		$('.Portfolio2Close').hide();
+	}
+	function OpenScrum() {
+
+        result = ScrumString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.ScrumImgFlexContainer').hide();
+		$('.ScrumContainer').css("display", "block");
+		$('.ScrumClose').css("display", "inline-block");
+        $('.ScrumExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseScrum() {
+
+        $('.ScrumContainer').hide();
+		$('.ScrumImgFlexContainer').css("display", "flex");
+		$('.ScrumClose').hide();
+	}
+	function OpenResearch() {
+
+        result = ResearchString.split('\n').map(e => `<p>${e}</p>`);
+
+		$('.ResearchImgFlexContainer').hide();
+		$('.ResearchContainer').css("display", "block");
+		$('.ResearchClose').css("display", "inline-block");
+        $('.ResearchExperience')[0].innerHTML = result.join('');
+
+	}
+
+	function CloseResearch() {
+
+        $('.ResearchContainer').hide();
+		$('.ResearchImgFlexContainer').css("display", "flex");
+		$('.ResearchClose').hide();
+	}
+
+	function plusDivs(n) {
+		if (ProjectTypeIndex == 0) {
+            showDivs(slideIndex += n);
+        }
+        else if (ProjectTypeIndex == 1) {
+            showGameDivs(slideIndex += n);
+        }
+        else if (ProjectTypeIndex == 2) {
+			showResearchDivs(slideIndex += n);
+		}
+        if (slideIndex == 1) {
+			$('.SlideIndex1').css("background-color", "#b59a5a");
+			$('.SlideIndex2').css("background-color", "white");
+			$('.SlideIndex3').css("background-color", "white");
+        }
+        else if(slideIndex == 2){
+			$('.SlideIndex2').css("background-color", "#b59a5a");
+			$('.SlideIndex1').css("background-color", "white");
+			$('.SlideIndex3').css("background-color", "white");
+        }
+		else if(slideIndex == 3){
+			$('.SlideIndex3').css("background-color", "#b59a5a");
+			$('.SlideIndex1').css("background-color", "white");
+			$('.SlideIndex2').css("background-color", "white");
+		}
+	}
+	
+	function showDivs(n) {
+		
+		CloseDialogs();
+        HideWebApps();
+        HideGames();
+        HideResearch();
+        ShowWebSlideIndexes();
+
+		var i;
+		var secondIndex = 0;
+		ProjectTypeIndex = 0;
+
+		$('.webapp-grid').eq(1).show();
+
+		var WebAppSlides1 = $('.WebAppSlides1');
+		var WebAppSlides2 = $('.WebAppSlides2');
+
+        if (n == WebAppSlides1.length) {
+            $('.next').css("display", "none");
+
+            if (n == WebAppSlides2.length) {
+                secondIndex = n - 1;
+                $('.WebAppSlides2.None').eq(secondIndex).addClass("Shown"); //only do this to the child with the secondIndex
+                $('.WebAppSlides2.None').eq(secondIndex).removeClass("None"); //only do this to the child with the secondIndex
+				$('.webapp-label-2')[0].innerHTML = Titles[n + 2];
+				$('.webapp-button2 a').attr("href", Links[n + 2]);
+            }
+            else {
+                $('.webapp-grid').eq(1).hide();
+			}
+        }
+        else {
+			$('.next').css("display", "inline-block");
+
+			secondIndex = n - 1;
+			$('.WebAppSlides2.None').eq(secondIndex).addClass("Shown");
+			$('.WebAppSlides2.None').eq(secondIndex).removeClass("None");
+			$('.webapp-label-2')[0].innerHTML = Titles[n + 2];
+			$('.webapp-button2 a').attr("href", Links[n + 2]);
+		}
+
+        if (n == 1) {
+            $('.prev').css("display", "none");
+        }
+        else {
+			$('.prev').css("display", "inline-block");
+		}
+		
+		$('.WebAppSlides1.None').eq(n-1).addClass("Shown");
+		$('.WebAppSlides1.None').eq(n-1).removeClass("None");
+        $('.webapp-label-1')[0].innerHTML = Titles[n - 1];
+		$('.webapp-button1 a').attr("href", Links[n - 1]);
+	}
+
+	function showGameDivs(n) {
+
+		CloseDialogs();
+        HideGames();
+        HideWebApps();
+        HideResearch();
+        ShowGameSlideIndexes();
+
+		var i;
+		var secondIndex = 0;
+		ProjectTypeIndex = 1;
+
+		$('.webapp-grid').eq(1).show();
+
+		var WebAppSlides3 = $('.WebAppSlides3');
+		var WebAppSlides4 = $('.WebAppSlides4');
+	
+        if (n == WebAppSlides3.length) {
+            $('.next').css("display", "none");
+
+            if (n == WebAppSlides4.length) {
+                secondIndex = n - 1;
+                $('.WebAppSlides4.None').eq(secondIndex).addClass("Shown"); //only do this to the child with the secondIndex
+                $('.WebAppSlides4.None').eq(secondIndex).removeClass("None"); //only do this to the child with the secondIndex
+				$('.webapp-label-2')[0].innerHTML = Titles[n + 5];
+				$('.webapp-button2 a').attr("href", Links[n + 5]);
+            }
+            else {
+                $('.webapp-grid').eq(1).hide();
+			}
+        }
+        else {
+			$('.next').css("display", "inline-block");
+
+			secondIndex = n - 1;
+			$('.WebAppSlides4.None').eq(secondIndex).addClass("Shown");
+			$('.WebAppSlides4.None').eq(secondIndex).removeClass("None");
+			$('.webapp-label-2')[0].innerHTML = Titles[n + 5];
+			$('.webapp-button2 a').attr("href", Links[n + 5]);
+		}
+
+        if (n == 1) {
+            $('.prev').css("display", "none");
+        }
+        else {
+			$('.prev').css("display", "inline-block");
+		}
+		
+		$('.WebAppSlides3.None').eq(n-1).addClass("Shown");
+		$('.WebAppSlides3.None').eq(n-1).removeClass("None");
+		$('.webapp-label-1')[0].innerHTML = Titles[n + 4];
+		$('.webapp-button1 a').attr("href", Links[n + 4]);
+	}
+
+	function showResearchDivs(n) {
+
+		CloseDialogs();
+        HideResearch();
+        HideWebApps();
+        HideGames();
+        ShowResearchSlideIndexes();
+
+		var i;
+		var secondIndex = 0;
+		ProjectTypeIndex = 2;
+
+		$('.webapp-grid').eq(1).show();
+
+		var WebAppSlides5 = $('.WebAppSlides5');
+		var WebAppSlides6 = $('.WebAppSlides6');
+	
+        if (n == WebAppSlides5.length) {
+            $('.next').css("display", "none");
+
+            if (n == WebAppSlides6.length) {
+                secondIndex = n - 1;
+                $('.WebAppSlides6.None').eq(secondIndex).addClass("Shown"); //only do this to the child with the secondIndex
+                $('.WebAppSlides6.None').eq(secondIndex).removeClass("None"); //only do this to the child with the secondIndex
+				$('.webapp-label-2')[0].innerHTML = Titles[n + 7];
+				$('.webapp-button2 a').attr("href", Links[n + 7]);
+            }
+            else {
+                $('.webapp-grid').eq(1).hide();
+			}
+        }
+        else {
+			$('.next').css("display", "inline-block");
+
+			secondIndex = n - 1;
+			$('.WebAppSlides6.None').eq(secondIndex).addClass("Shown");
+			$('.WebAppSlides6.None').eq(secondIndex).removeClass("None");
+			$('.webapp-label-2')[0].innerHTML = Titles[n + 7];
+			$('.webapp-button2 a').attr("href", Links[n + 7]);
+		}
+
+        if (n == 1) {
+            $('.prev').css("display", "none");
+        }
+        else {
+			$('.prev').css("display", "inline-block");
+		}
+		
+		$('.WebAppSlides5.None').eq(n-1).addClass("Shown");
+		$('.WebAppSlides5.None').eq(n-1).removeClass("None");
+		$('.webapp-label-1')[0].innerHTML = Titles[n + 6];
+		$('.webapp-button1 a').attr("href", Links[n + 6]);
+	}
+})
+
+
+
+</Script>
+
