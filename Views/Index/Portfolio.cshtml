@@ -137,8 +137,8 @@ $(document).ready(function () {
 	var Portfolio1String = "• \"Portfolio\" is a portfolio web application created with ASP.Net to showcase these projects and provide a visual interpretation of this Resume."  + '\r\n' + "• Utilized Asp.Net to create the MVC layout for the web application."  + '\r\n' + "• Designed UI with HTML and CSS."  + '\r\n' + "• created an Email Contact Form using Javascript and JQuery."  + '\r\n' + "• Made interactive views with javascript";
 	var ScrumString = "• \"Scrum Task Board\" is an interactive Web Application based on Agile Methodologies."  + '\r\n' + "• Implemented a system in which user data is protected while creating an organized Sprint-based environment."  + '\r\n' + "• Developed a backend that Stores and manipulates data dynamically, emphasizing efficiency, security and organization."  + '\r\n' + "• Built backend in C++. Stored User data with MySQL. Styled UI with CSS, minimal javascript and manipulated HTML DOM with Wt.";
     var LegendsBladeString = "• \"A Legend's Blade\" is a 3D infinite survival Sword-Fighting game that is available on Mac, Windows, and Linux."  + '\r\n' + "• Sole Contributor to Game Programming, Art, Animation, 3d Modeling, Music, Sound Effects, Game Design, UX/UI, and Networking."  + '\r\n' + "• Implemented dynamic difficulty algorithm, live-scoring, Leaderboard system, Artificial Intelligence, level design constructs, round management system, and optimized collision detection."  + '\r\n' + "• Created and designed game with Unity in C#.";
-    var FlappyBirdString = "• \"Infinite Fantasy\" is a retro-style 2D infinite side-scroller game."  + '\r\n' + "• Developed Collision Detection, Physics-based Kinematic Algorithms, a live scoring system, a leaderboard management system, and a dynamic difficulty Algorithm."  + '\r\n' + "• Built the entire program and UI in C++ with pixels rendered through OpenGL using a low level Pixel Game Engine.";
-    var ResearchString = "• Researched Artificial Intelligence, Machine and Deep Learning."  + '\r\n' + "• Modeled Machine Learning algorithms with TensorFlow."  + '\r\n' + "• Created a presentation that displays research findings as well as educates on AI concepts in Insurance.";
+    var FlappyBirdString = "• \"Infinite Fantasy\" is a retro-style 2D infinite side-scroller game." + '\r\n' + "• Developed Collision Detection, Physics-based Kinematic Algorithms, a live scoring system, a leaderboard management system, and a dynamic difficulty Algorithm." + '\r\n' + "• Built the entire program and UI in C++ with pixels rendered through OpenGL using a low level Pixel Game Engine.";
+	var ResearchString = "• Researched Artificial Intelligence, Machine and Deep Learning."  + '\r\n' + "• Modeled Machine Learning algorithms with TensorFlow."  + '\r\n' + "• Created a presentation that displays research findings as well as educates on AI concepts in Insurance.";
 	var slideIndex = 1;
 	var Titles = ["Pathfinding Algorithm Visualizer","Previous Portfolio Website","Authentication System", "Asp.Net Portfolio Web App", "Sprint Management System", "3D Action-Adventure Game", "2D Side-Scroller Game", "AI: Significant Impacts in the Insurance Sector"];
 	var Links = ["https://github.com/gcobb1/PowerPuzzle","https://github.com/gcobb1/PortfolioWebsite","https://github.com/gcobb1/ProAuthy", "https://github.com/gcobb1/PortfolioWebsite", "https://github.com/gcobb1/SCRUMBoard", "https://www.youtube.com/watch?v=UreAODjFMM0", "https://www.youtube.com/watch?v=R3QR_XIBqks", "https://www.researchgate.net/publication/341700711_Artificial_Intelligence_Significance_In_The_Insurance_Sector.com"];
@@ -442,7 +442,8 @@ $(document).ready(function () {
 		$('.LegendsBladeContainer').css("display", "block");
 		$('.LegendsBladeClose').css("display", "inline-block");
         $('.LegendsBladeExperience')[0].innerHTML = result.join('');
-
+		$('.LegendsBladeExperience')[0].innerHTML += "<a href='"+"https://github.com/gcobb1/ALegendsBlade"+"'>View Code</a>";
+		$('.LegendsBladeExperience')[0].innerHTML += "<a href='"+"https://gavincobb.itch.io/a-legends-blade"+"'>Download Game</a>";
 	}
 
 	function CloseLegendsBlade() {
@@ -460,6 +461,7 @@ $(document).ready(function () {
 		$('.FlappyBirdContainer').css("display", "block");
 		$('.FlappyBirdClose').css("display", "inline-block");
         $('.FlappyBirdExperience')[0].innerHTML = result.join('');
+        $('.FlappyBirdExperience')[0].innerHTML += "<a href='"+"https://github.com/gcobb1/InfiniteFantasy"+"'>View Code</a>";
 
 	}
 

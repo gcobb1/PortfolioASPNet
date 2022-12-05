@@ -1272,6 +1272,12 @@ ul.callbacks_tabs.callbacks4_tabs {
 	padding: 0.25em 0;
 }
 
+.LegendsBladeExperience a {
+    color: #B59A5A;
+    text-align: center;
+    display: block;
+}
+
 .LegendsBladeClose {
 	position: absolute;
 	display: none;
@@ -1308,6 +1314,13 @@ ul.callbacks_tabs.callbacks4_tabs {
 	line-height: 1.7em;
 	padding: 0.25em 0;
 }
+
+.FlappyBirdExperience a {
+    color: #B59A5A;
+    text-align: center;
+    display: block;
+}
+
 
 .FlappyBirdClose {
 	position: absolute;
