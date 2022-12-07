@@ -1997,6 +1997,7 @@ textarea {
 		}
 
 		.top-menu {
+			padding: 1em 0;
 			width: 11%;
 			float: right;
 			margin: 0;
@@ -2055,7 +2056,7 @@ textarea {
 		}
 
 		.banner {
-			min-height: 100px;
+			min-height: 50px;
 			background: #282c34;
 			background-size: cover;
 		}
@@ -2209,7 +2210,7 @@ textarea {
 		}
 
 		.footer-icons {
-			padding: 0em 0 .8em;
+			padding: 0em 0 0em;
 		}
 
 		#selectProjectType {
@@ -2372,7 +2373,7 @@ textarea {
 		}
 
 		.about {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.about-info h3 {
@@ -2498,7 +2499,7 @@ textarea {
 		}
 
 		.portfolio {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.portfolio-info h3 {
@@ -2569,7 +2570,7 @@ textarea {
 		}
 
 		.services {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.contact-info h3 {
@@ -2577,7 +2578,7 @@ textarea {
 		}
 
 		.contact {
-			padding: 2em 0 2em;
+			padding: 1em 0 2em;
 		}
 
 		input[type="text"] {
@@ -2595,7 +2596,7 @@ textarea {
 		}
 
 		.footer {
-			padding: 2em 0;
+			padding: 0em 0;
 		}
 
 			.footer p {
@@ -2691,7 +2692,7 @@ textarea {
 		}
 
 		.about {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.about-info h3 {
@@ -2796,7 +2797,7 @@ textarea {
 		}
 
 		.portfolio {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.portfolio-info h3 {
@@ -2867,7 +2868,7 @@ textarea {
 		}
 
 		.services {
-			padding: 2em 0;
+			padding: 1em 0;
 		}
 
 		.contact-info h3 {
@@ -2875,7 +2876,7 @@ textarea {
 		}
 
 		.contact {
-			padding: 2em 0 2em;
+			padding: 1em 0 2em;
 		}
 
 		input[type="text"] {
@@ -2893,7 +2894,7 @@ textarea {
 		}
 
 		.footer {
-			padding: 2em 0;
+			padding: 0em 0;
 		}
 
 			.footer p {
@@ -2934,7 +2935,7 @@ textarea {
 
 	@media (max-width: 320px) {
 		.top-menu {
-			padding: 2.5em 0;
+			padding: 1em 0;
 		}
 
 		.banner-intro h1 {
@@ -2943,7 +2944,7 @@ textarea {
 		}
 
 		.banner {
-			min-height: 100px;
+			min-height: 50px;
 		}
 
 		.logo a img {
@@ -3165,7 +3166,7 @@ textarea {
 		}
 
 		.footer {
-			padding: 1.2em 0;
+			padding: 0em 0;
 		}
 
 			.footer p {
